@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>مُبَكِّر...مساعدك الصحي</title>
+  <style>
+    body {
+      background-color: #e8f5e9;
+      font-family: 'Arial', sans-serif;
+      direction: rtl;
+      text-align: center;
+      padding: 20px;
+    }
+    h1 {
+      font-size: 36px;
+      color: #2e7d32;
+      margin-bottom: 0;
+    }
+    h2 {
+      font-size: 18px;
+      color: #555;
+      margin-top: 5px;
+    }
+    form {
+      margin-top: 30px;
+    }
+    input[type="text"] {
+      width: 60%;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #388e3c;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .chat-box {
+      margin-top: 30px;
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+  <h1>مُبَكِّر</h1>
+  <h2>لأن صحتك ما تنتظر</h2>
+  <form method="POST">
+    <input type="text" name="user_input" placeholder="أدخل أعراضك هنا..." required>
+    <button type="submit">إرسال</button>
+  </form>
+
+  {% if reply %}
+    <div class="chat-box">
+      <p><strong>الرد:</strong> {{ reply }}</p>
+    </div>
+  {% endif %}
+</body>
+</html>
